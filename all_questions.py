@@ -8,16 +8,16 @@ def question1():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = "no"
+    answers["(b)"] = "no"
+    answers["(c)"] = "yes"
+    answers["(d)"] = "yes"
 
     # explain-string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "There are instances where multiple rules may apply to the same data point."
+    answers["(b) explain"] = "There are scenarios where none of the rules apply"
+    answers["(c) explain"] = "The rules are evaluated sequentially and the outcome of the classification may depend on order."
+    answers["(d) explain"] = "Since there are instances where none of the rules apply, having a default class ensures that all cases are accounted for."
 
     return answers
 
@@ -44,14 +44,14 @@ def question3():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
+    answers["(a)"] = "no"
+    answers["(b)"] = "yes"
+    answers["(c)"] = "yes"
 
     # explain-string: explanation in english prose
-    answers["(a) example"] = None
-    answers["(b) example"] = None
-    answers["(c) example"] = None
+    answers["(a) example"] = "There are instances where multiple rules apply to the same data point."
+    answers["(b) example"] = "Each rule covers a specific combination of atrributes, ensuring that every possible scenario is accounted for."
+    answers["(c) example"] = "The rules should be evaluated in a specific order to avoid conflicts and ensure correct classification."
 
     return answers
 # -----------------------------------------------------------
