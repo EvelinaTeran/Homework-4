@@ -59,16 +59,16 @@ def question7():
     answers = {}
 
     # bool: True/False
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = False
+    answers["(b)"] = True
+    answers["(c)"] = False
+    answers["(d)"] = False
 
     # explain_string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "Since the weights at level k+1 are updated BEFORE the weights at level k are updated, the gradients of weights at the k+1th layer cannot be computed using the gradients of weights at the kth layer."
+    answers["(b) explain"] = "For forward phase of back-propogation the outputs of the neurons at level k are computed prior to computing prior to computing the outputs at level k+1"
+    answers["(c) explain"] = "Vanishing gradient problem occurs when the gradients become very small during backpropagation."
+    answers["(d) explain"] = "The gradients of loss with repsect to weights at all layers will not necessarily be zero."
 
     return answers
 
@@ -115,12 +115,12 @@ def question9():
     answers = {}
 
     # int
-    answers["(a) K"] = None
-    answers["(b) K"] = None
+    answers["(a) K"] = 1
+    answers["(b) K"] = 5
 
     # explain_string
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
+    answers["(a) explain"] = "Since the points are closely clustered and have distinct regions, using k=1 will allow the model to capture the local structure more accurately."
+    answers["(b) explain"] = "Since the data points are more spread out and there is no clear separation between classes, using k=5 will help smooth out the decision boundary and reduce the imapct of noise."
 
     return answers
 
