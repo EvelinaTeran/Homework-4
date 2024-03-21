@@ -62,7 +62,7 @@ def question7():
     answers["(a)"] = False
     answers["(b)"] = True
     answers["(c)"] = False
-    answers["(d)"] = False
+    answers["(d)"] = True #change justification
 
     # explain_string: explanation in english prose
     answers["(a) explain"] = "Since the weights at level k+1 are updated BEFORE the weights at level k are updated, the gradients of weights at the k+1th layer cannot be computed using the gradients of weights at the kth layer."
