@@ -23,6 +23,7 @@ def question1():
 
 
 # -----------------------------------------------------------
+"""
 def question2():
     answers = {}
 
@@ -39,6 +40,7 @@ def question2():
     answers["(d) explain"] = None
 
     return answers
+"""
 # -----------------------------------------------------------
 def question3():
     answers = {}
@@ -62,53 +64,50 @@ def question7():
     answers["(a)"] = False
     answers["(b)"] = True
     answers["(c)"] = False
-    answers["(d)"] = True #change justification
+    answers["(d)"] = True #add justification
 
     # explain_string: explanation in english prose
     answers["(a) explain"] = "Since the weights at level k+1 are updated BEFORE the weights at level k are updated, the gradients of weights at the k+1th layer cannot be computed using the gradients of weights at the kth layer."
     answers["(b) explain"] = "For forward phase of back-propogation the outputs of the neurons at level k are computed prior to computing prior to computing the outputs at level k+1"
     answers["(c) explain"] = "Vanishing gradient problem occurs when the gradients become very small during backpropagation."
-    answers["(d) explain"] = "The gradients of loss with repsect to weights at all layers will not necessarily be zero."
-
+    answers["(d) explain"] = "ADD SOMETHING HERE"
     return answers
 
 # -----------------------------------------------------------
 def question8():
     answers = {}
 
-
     # float
-    answers["(a) P(X_1 = 1 | +)"] = None
-    answers["(a) P(X_1 = 1 | -)"] = None
-    answers["(a) P(X_2 = 1 | +)"] = None
-    answers["(a) P(X_2 = 1 | -)"] = None
-    answers["(a) P(X_3 = 1 | +)"] = None
-    answers["(a) P(X_3 = 1 | -)"] = None
-
-    # string
-    answers["(b) label"] = None
-
-    # float
-    answers["(c) P(X_1=1)"] = None
-    answers["(c) P(X_2=1)"] = None
-    answers["(c) P(X_1=1,X_2=1)"] = None
+    answers["(a) P(X_1=1)"] = 65/100
+    answers["(a) P(X_2=1)"] = 41/100
+    answers["(a) P(X_1=1,X_2=1)"] = 28/100
 
     # string: "dependent" or "independent"
-    answers["(c) Relationship between X_1 and X_2"] = None
-
-    # float
-    answers["(d) P(A=1)"] = None
-    answers["(e) P(X_1=1, X_2=1|Class=+)"] = None
-    answers["(e) P(X_1=1|Class=+)"] = None
-    answers["(e) P(X_2=1|Class=+)"] = None
+    answers["(a) Relationship between X_1 and X_2"] = "dependent"
 
     # string: "yes" or "no"
-    answers["(e) A and B conditionally independent?"] = None
+    answers["(b) X_1 and X_2 conditionally independent given the class?"] = None
 
     # float
+    answers["(c) P(X_1=1 | +)"] = 40/50
+    answers["(c) P(X_1=1 | -)"] = 25/50
+    answers["(c) P(X_2=1 | +)"] = 25/50
+    answers["(c) P(X_2=1 | -)"] = 16/50
+    answers["(c) P(X_3=1 | +)"] = 20/50
+    answers["(c) P(X_3=1 | -)"] = 8/50
+
+    # For each row give the class predicted by the model after training using Naive Bayes
+    # String: either '+' or '-'
+    answers["(d) Row 1"] = None
+    answers["(d) Row 2"] = None
+    answers["(d) Row 3"] = None
+    answers["(d) Row 4"] = None
+
+    # float between 0 and 1
     answers["(d) Training error rate"] = None
 
     return answers
+
 
 # --------------------------------------------------------
 def question9():
@@ -127,17 +126,24 @@ def question9():
 # --------------------------------------------------------
 def question10():
     answers = {}
+    
+    # Things to keep in mind
+    A = 5
+    B = 4
+    C = 5
+    positive_instances = 5
+    negative_instances = 5
 
     # float
-    answers["(a) P(A=1|+)"] = None
-    answers["(a) P(B=1|+)"] = None
-    answers["(a) P(C=1|+)"] = None
-    answers["(a) P(A=1|-)"] = None
-    answers["(a) P(B=1|-)"] = None
-    answers["(a) P(C=1|-)"] = None
+    answers["(a) P(A=1|+)"] = 3/5
+    answers["(a) P(B=1|+)"] = 2/5
+    answers["(a) P(C=1|+)"] = 4/5
+    answers["(a) P(A=1|-)"] = 2/5
+    answers["(a) P(B=1|-)"] = 2/5
+    answers["(a) P(C=1|-)"] = 1/5
 
     # type: explanatory string
-    answers["(a) P(A=1|+) explain your answer"] = None
+    answers["(a) P(A=1|+) explain your answer"] = "Of the 5 instances that resulted in a positive class, A was 1 for 3 of those 5 instances. Therefore, p(A=1|+) = 3/5."
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
@@ -183,9 +189,9 @@ def question10():
 if __name__ == '__main__':
     answers_dict = {}
     answers_dict['question1'] = question1()
-    answers_dict['question2'] = question2()
+    #answers_dict['question2'] = question2()
     answers_dict['question3'] = question3()
-    answers_dict['question4'] = question4()
+    #answers_dict['question4'] = question4()
     answers_dict['question7'] = question7()
     answers_dict['question8'] = question8()
     answers_dict['question9'] = question9()
