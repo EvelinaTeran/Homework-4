@@ -70,7 +70,7 @@ def question7():
     answers["(a) explain"] = "Since the weights at level k+1 are updated BEFORE the weights at level k are updated, the gradients of weights at the k+1th layer cannot be computed using the gradients of weights at the kth layer."
     answers["(b) explain"] = "For forward phase of back-propogation the outputs of the neurons at level k are computed prior to computing prior to computing the outputs at level k+1"
     answers["(c) explain"] = "Vanishing gradient problem occurs when the gradients become very small during backpropagation."
-    answers["(d) explain"] = "ADD SOMETHING HERE"
+    answers["(d) explain"] = "If the model perfectly classifies all training instances then the loss from our loss function would be zero which means the gradient would be zero."
     return answers
 
 # -----------------------------------------------------------
