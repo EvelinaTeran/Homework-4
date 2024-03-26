@@ -64,7 +64,7 @@ def question7():
     answers["(a)"] = False
     answers["(b)"] = True
     answers["(c)"] = False
-    answers["(d)"] = True #add justification
+    answers["(d)"] = True 
 
     # explain_string: explanation in english prose
     answers["(a) explain"] = "Since the weights at level k+1 are updated BEFORE the weights at level k are updated, the gradients of weights at the k+1th layer cannot be computed using the gradients of weights at the kth layer."
@@ -86,7 +86,7 @@ def question8():
     answers["(a) Relationship between X_1 and X_2"] = "dependent"
 
     # string: "yes" or "no"
-    answers["(b) X_1 and X_2 conditionally independent given the class?"] = None
+    answers["(b) X_1 and X_2 conditionally independent given the class?"] = "yes"
 
     # float
     answers["(c) P(X_1=1 | +)"] = 40/50
